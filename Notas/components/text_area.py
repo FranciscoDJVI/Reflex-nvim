@@ -10,6 +10,7 @@ class FormInputState(rx.State):
         """Handle the form submit."""
         self.form_data = form_data
         self.count += 1
+        #Recorre el diccionario de datos y los agrega a una lista
         for register in self.form_data:
             self.view_data_note.append(register)
         print(self.view_data_note.values())
