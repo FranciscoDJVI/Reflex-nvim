@@ -40,6 +40,7 @@ def form_input1():
                 ),
             rx.table.body(
                 rx.table.row(
+                    #Mustra la informacion de la nota en pantalla
                     rx.table.row_header_cell(f"{FormInputState.form_data.values()}"),
                 ),
             ),
