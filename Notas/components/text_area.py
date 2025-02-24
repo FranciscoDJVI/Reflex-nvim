@@ -2,7 +2,7 @@ import reflex as rx
 
 class FormInputState(rx.State):
     form_data: dict = {}
-    view_data_note: list = []
+    view_data_note: list = {}
     count: int = 0
 
     @rx.event
@@ -12,8 +12,8 @@ class FormInputState(rx.State):
         self.count += 1
         #Recorre el diccionario de datos y los agrega a una lista
         for register in self.form_data:
-            self.view_data_note.append(register)
-        print(self.view_data_note.values())
+            self.view_data_note["register"]= self.form_data
+        return self.view_data_note.values()
 
 def form_input1():
     return rx.card(
